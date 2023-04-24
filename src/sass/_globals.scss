@@ -1,0 +1,47 @@
+@use './variables' as variables;
+
+html {
+  font-size: 10px;
+  font-size: 62.5%;
+}
+
+body {
+  &.top-margin {
+    margin-top: 3.2rem;
+  }
+}
+
+.container {
+  width: 100%;
+  padding: 0 3rem;
+  margin: 0 auto;
+
+  @include variables.media-up(xxl) {
+    width: 136.4rem;
+  }
+
+  &--wide {
+    @include variables.media-up(xxl) {
+      width: 136.4rem;
+    }
+
+    @include variables.media-up(xxxl) {
+      width: 164rem;
+    }
+  }
+
+  .row {
+    display: flex;
+    margin-left: -3rem;
+    margin-right: -3rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    .col {
+      padding-right: 3rem;
+      padding-left: 3rem;
+      width: 100%;
+    }
+  }
+}

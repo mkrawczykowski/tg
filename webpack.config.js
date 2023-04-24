@@ -7,14 +7,14 @@ module.exports = (env, argv) => {
   return {
     entry: './src/index.js',
     output: {
-      filename: 'main.min.js',
+      filename: 'scripts.min.js',
       path: path.resolve(__dirname, 'dist'),
     },
     watchOptions: {
       ignored: /node_modules/,
     },
     plugins: [new MiniCssExtractPlugin({
-      filename: "main.min.css"
+      filename: "style.min.css"
     })],
     module: {
       rules: [
