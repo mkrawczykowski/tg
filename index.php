@@ -4,8 +4,94 @@
 
 	<main class="">
 		<?php
-      the_title();
+    if (!is_front_page()){
+      the_title();  
+    }
     ?>
+    <br>
+    sdsdsdsdcvsavda s ag as adsghasd  hah ah a 
+    <br>
+    sdsdsdsdcvsavda s ag as adsghasd  hah ah a 
+    <br>
+    sdsdsdsdcvsavda s ag as adsghasd  hah ah a 
+    <br>
+    sdsdsdsdcvsavda s ag as adsghasd  hah ah a 
+    <br>
+    sdsdsdsdcvsavda s ag as adsghasd  hah ah a 
+    <br>
+    sdsdsdsdcvsavda s ag as adsghasd  hah ah a 
+    <br>
+    sdsdsdsdcvsavda s ag as adsghasd  hah ah a 
+    <br>
+    sdsdsdsdcvsavda s ag as adsghasd  hah ah a 
+    <br>
+    sdsdsdsdcvsavda s ag as adsghasd  hah ah a 
+    <br>
+    sdsdsdsdcvsavda s ag as adsghasd  hah ah a 
+    <br>
+    sdsdsdsdcvsavda s ag as adsghasd  hah ah a 
+    <br>
+    sdsdsdsdcvsavda s ag as adsghasd  hah ah a 
+    <br>
+    sdsdsdsdcvsavda s ag as adsghasd  hah ah a 
+    <br>
+    sdsdsdsdcvsavda s ag as adsghasd  hah ah a 
+    <br>
+    sdsdsdsdcvsavda s ag as adsghasd  hah ah a 
+    <br>
+    sdsdsdsdcvsavda s ag as adsghasd  hah ah a 
+    <br>
+    sdsdsdsdcvsavda s ag as adsghasd  hah ah a 
+    <br>
+    sdsdsdsdcvsavda s ag as adsghasd  hah ah a 
+    <br>
+    sdsdsdsdcvsavda s ag as adsghasd  hah ah a 
+    <br>
+    sdsdsdsdcvsavda s ag as adsghasd  hah ah a 
+    <br>
+    sdsdsdsdcvsavda s ag as adsghasd  hah ah a 
+    <br>
+    sdsdsdsdcvsavda s ag as adsghasd  hah ah a 
+    <br>
+    sdsdsdsdcvsavda s ag as adsghasd  hah ah a 
+    <br>
+    sdsdsdsdcvsavda s ag as adsghasd  hah ah a 
+    <br>
+    sdsdsdsdcvsavda s ag as adsghasd  hah ah a 
+    <br>
+    sdsdsdsdcvsavda s ag as adsghasd  hah ah a 
+    <br>
+    sdsdsdsdcvsavda s ag as adsghasd  hah ah a 
+    <br>
+    sdsdsdsdcvsavda s ag as adsghasd  hah ah a 
+    <br>
+    sdsdsdsdcvsavda s ag as adsghasd  hah ah a 
+    <br>
+    sdsdsdsdcvsavda s ag as adsghasd  hah ah a 
+    <br>
+    sdsdsdsdcvsavda s ag as adsghasd  hah ah a 
+    <br>
+    sdsdsdsdcvsavda s ag as adsghasd  hah ah a 
+    <br>
+    sdsdsdsdcvsavda s ag as adsghasd  hah ah a 
+    <br>
+    sdsdsdsdcvsavda s ag as adsghasd  hah ah a 
+    <br>
+    sdsdsdsdcvsavda s ag as adsghasd  hah ah a 
+    <br>
+    sdsdsdsdcvsavda s ag as adsghasd  hah ah a 
+    <br>
+    sdsdsdsdcvsavda s ag as adsghasd  hah ah a 
+    <br>
+    sdsdsdsdcvsavda s ag as adsghasd  hah ah a 
+    <br>
+    sdsdsdsdcvsavda s ag as adsghasd  hah ah a 
+    <br>
+    sdsdsdsdcvsavda s ag as adsghasd  hah ah a 
+    <br>
+    sdsdsdsdcvsavda s ag as adsghasd  hah ah a 
+    <br>
+    sdsdsdsdcvsavda s ag as adsghasd  hah ah a 
 	</main>
 
 <?php

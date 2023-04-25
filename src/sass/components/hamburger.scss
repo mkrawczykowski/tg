@@ -1,0 +1,57 @@
+.hamburger {
+  width: 4rem;
+  height: 4rem;
+  // background-color: aqua;
+  position: relative;
+
+  @include media-up(xl) {
+    display: block;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  span {
+    background-color: $black;
+    display: inline-block;
+    width: 4rem;
+    height: 0.3rem;
+    position: absolute;
+    transition: all 0.3s ease;
+
+    &:first-of-type {
+      top: 0.6rem;
+    }
+
+    &:nth-of-type(2) {
+      top: 1.8rem;
+      opacity: 1;
+    }
+
+    &:last-of-type {
+      top: 3rem;
+    }
+  }
+
+  &.active {
+    span {
+      &:first-of-type {
+        transform: rotate(45deg);
+        transform-origin: top left;
+        width: 3.5rem;
+        left: 0.2rem;
+      }
+
+      &:nth-of-type(2) {
+        opacity: 0;
+      }
+
+      &:last-of-type {
+        transform: rotate(-45deg);
+        transform-origin: top left;
+        width: 3.5rem;
+      }
+    }
+  }
+}

@@ -1,5 +1,11 @@
 .logo {
-  width: 21.5rem;
-  height: 14rem;
+  width: 15.5rem;
+  height: auto;
   display: inline-block;
+  display: flex;
+  align-items: center;
+
+  @include media-up(md) {
+    width: 21.5rem;
+  }
 }

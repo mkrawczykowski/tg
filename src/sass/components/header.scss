@@ -1,0 +1,26 @@
+.header {
+  // padding-top: 2.7rem;
+  min-height: 10rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid $lightBlue;
+  padding-top: 2rem;
+
+  @include media-up(md) {
+    min-height: 13.5rem;
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include media-up(md) {
+      flex-wrap: nowrap;
+    }
+
+    .main-nav {
+      margin-left: auto;
+    }
+  }
+}

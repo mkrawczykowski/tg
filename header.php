@@ -9,11 +9,13 @@
 </head>
 
 <body class="<?php echo  (is_user_logged_in()) ? "top-margin" : null; ?>">
-  <header>
+  <header class="header">
     <div class="container container--wide">
       <div class="row">
-        <div class="col">
-          <a class="logo">
+        <div class="col header__content">
+
+
+          <a class="logo" href="<?php echo site_url(); ?>">
             <picture class="logo__picture">
               <source type="image/webp"
                 srcset=
@@ -34,10 +36,36 @@
               >
             </picture>
           </a>
-          <div class="quick-contact"></div>
-          <nav class="main-nav"></div>          
+
+
+          <div class="quick-contact">
+            <?php
+            $header_email = get_field('header_email', 'options');
+            if (!empty($header_email)) : ?>
+              <a class="quick-contact__link" href="<?php echo $header_email; ?>">Szybki kontakt</a>  
+            <?php endif ?>
+          </div>
+
+
+          <div class="hamburger" id="js-hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+
+          <?php
+            wp_nav_menu( array(
+              'theme_location' => 'header-menu',
+              'container'      => 'nav',
+              'container_class'=> 'main-nav',
+              'menu_class'     => 'main-nav__nav',
+              'container_id'   => 'js-main-nav'
+            ) );
+          ?>
+
+
         </div>
       </div>
     </div>
-
   </header>
