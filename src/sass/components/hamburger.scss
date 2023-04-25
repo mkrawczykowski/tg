@@ -4,8 +4,11 @@
   // background-color: aqua;
   position: relative;
 
+
+
   @include media-up(xl) {
-    display: block;
+    display: none; //for now
+    // display: block;
   }
 
   &:hover {
