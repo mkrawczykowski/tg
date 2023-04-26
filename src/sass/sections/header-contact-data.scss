@@ -1,0 +1,17 @@
+.header-contact-data {
+  .container {
+    .row {
+      justify-content: space-between;
+
+      .col {
+        &--first {
+          width: 61.2rem;
+        }
+
+        &--second {
+          width: 68.1rem;
+        }
+      }
+    }
+  }
+}

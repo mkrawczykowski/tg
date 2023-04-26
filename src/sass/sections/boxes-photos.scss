@@ -1,0 +1,11 @@
+.boxes-photos {
+  .container {
+    .row {
+      justify-content: space-between;
+
+      .col {
+        flex-grow: 1;
+      }
+    }
+  }
+}
