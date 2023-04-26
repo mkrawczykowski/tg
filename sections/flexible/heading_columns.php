@@ -9,31 +9,9 @@
       if ($image_or_text === 'obraz'){
         $image_field_name = 'image_' . $side_string;
         $image_ID = get_sub_field($image_field_name, $post->ID);
-      ?>
+      
+        echo wp_get_attachment_image($image_ID, 'image-612');
 
-      <?php echo wp_get_attachment_image($image_ID, 'image-612',); ?>,
-
-      <!-- <picture class="logo__picture">
-        <source 
-          srcset=
-            "
-            <?php echo wp_get_attachment_image($image_ID, 'image-612', '', $attr); ?>,
-            <?php echo get_stylesheet_directory_uri(); ?>/public/logo-technika-grzewcza@2x.png 2x
-            "
-        >
-        <img 
-          srcset=
-            "
-            <?php echo get_stylesheet_directory_uri(); ?>/public/logo-technika-grzewcza.png,
-            <?php echo get_stylesheet_directory_uri(); ?>/public/logo-technika-grzewcza@2x.png 2x
-            "
-          src="<?php echo get_stylesheet_directory_uri(); ?>/public/logo-technika-grzewcza.png"
-          alt="Technika Grzewcza - logo"
-          decoding="async"
-        >
-      </picture> -->
-
-      <?php
       }
       if ($image_or_text === 'tekst'){
         $lead_field_name = 'lead_' . $side_string;
