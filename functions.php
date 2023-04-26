@@ -6,4 +6,5 @@
   require_once get_template_directory() . '/includes/helpers.php';
   require_once get_template_directory() . '/includes/registers.php';
   require_once get_template_directory() . '/includes/filters.php';
+  require_once get_template_directory() . '/includes/shortcodes.php';
 ?>
