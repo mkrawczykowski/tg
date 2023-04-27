@@ -6,9 +6,11 @@ html {
 }
 
 body {
-  &.top-margin {
-    margin-top: 3.2rem;
-  }
+  position: relative;
+
+  // &.top-margin {
+  //   margin-top: 3.2rem;
+  // }
 }
 
 .container {

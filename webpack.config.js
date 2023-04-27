@@ -19,12 +19,20 @@ module.exports = (env, argv) => {
     module: {
       rules: [
         {
-          test: /\.s[ac]ss$/i,
+          test: /\.(scss|sass|less|css)$/,
           use: [
             MiniCssExtractPlugin.loader,
             "css-loader",
             "postcss-loader",
             "sass-loader",
+          ],
+        },
+        {
+          test: /\.(png|jpe?g|gif)$/i,
+          use: [
+            {
+              loader: 'file-loader',
+            },
           ],
         },
       ],

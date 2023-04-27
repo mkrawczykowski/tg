@@ -1,0 +1,46 @@
+.button {
+  padding: 1.4rem 3.5rem;
+  border-radius: 0.8rem;
+  font-size: 1.6rem;
+  line-height: 100%;
+  text-transform: uppercase;
+  display: inline-block;
+
+  &--blue {
+    background-color: $blue;
+    color: $white;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: $lightBlue;
+      color: $darkBlue;
+      transition: all 0.3s ease;
+    }
+  }
+
+  &--white {
+    background-color: $white;
+    color: $darkBlue;
+    border: 2px solid $lightBlue;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: $lightBlue;
+      color: $white;
+      transition: all 0.3s ease;
+    }
+  }
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+
+  .button {
+    margin-bottom: 1rem;
+
+    &:first-of-type {
+      margin-right: 2.6rem;
+    }
+  }
+}
