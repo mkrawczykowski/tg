@@ -1,7 +1,7 @@
 /*!********************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/sass/index.scss ***!
   \********************************************************************************************************************************************************/
-@import url(https://fonts.googleapis.com/css2?family=Barlow:wght@300,600;700;900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Barlow:wght@300,500,600;700;900&display=swap);
 /*!************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/sass/index.scss (1) ***!
   \************************************************************************************************************************************************************/
@@ -110,6 +110,11 @@ body {
   position: relative;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .container {
   width: 100%;
   padding: 0 3rem;
@@ -117,7 +122,7 @@ body {
 }
 @media screen and (min-width: 1400px) {
   .container {
-    width: 136.4rem;
+    width: 142.4rem;
   }
 }
 @media screen and (min-width: 1400px) {
@@ -135,7 +140,6 @@ body {
   margin-left: -3rem;
   margin-right: -3rem;
   justify-content: flex-start;
-  align-items: flex-start;
   flex-wrap: wrap;
 }
 .container .row .col {
@@ -627,14 +631,197 @@ body {
   max-width: 50%;
 }
 
+.heading-columns {
+  padding: 3rem;
+}
+@media screen and (min-width: 992px) {
+  .heading-columns {
+    padding: 4rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .heading-columns {
+    padding: 5rem;
+  }
+}
+@media screen and (min-width: 1800px) {
+  .heading-columns {
+    padding: 6rem;
+  }
+}
+.heading-columns--gradient {
+  background: rgb(235, 248, 255);
+  background: linear-gradient(180deg, rgb(235, 248, 255) 0%, rgb(255, 255, 255) 100%);
+}
 .heading-columns .container .row {
   justify-content: space-between;
 }
 .heading-columns .container .row .col--first {
-  width: 61.2rem;
+  width: 67.2rem;
 }
 .heading-columns .container .row .col--second {
-  width: 68.1rem;
+  width: 74.1rem;
+}
+.heading-columns .container .row .col h2 {
+  font-size: 6.4rem;
+  line-height: 120%;
+  color: #174766;
+  margin-bottom: 5.7rem;
+}
+.heading-columns .container .row .col .heading-columns__image {
+  border-radius: 1.2rem;
+}
+.heading-columns .container .row .col .heading-columns__lead {
+  font-size: 2rem;
+  line-height: 145%;
+  color: #174766;
+  margin-bottom: 3rem;
+}
+.heading-columns .container .row .col .heading-columns__text p {
+  font-size: 1.6rem;
+  line-height: 146%;
+  color: #174766;
+  margin-bottom: 3.2rem;
+}
+.heading-columns .container .row .col .heading-columns__text ul {
+  list-style-type: none;
+  margin-bottom: 3.2rem;
+}
+.heading-columns .container .row .col .heading-columns__text ul li {
+  font-size: 1.6rem;
+  line-height: 120%;
+  color: #174766;
+  position: relative;
+  padding: 0 0 0 1.2rem;
+  margin-bottom: 1.6rem;
+}
+.heading-columns .container .row .col .heading-columns__text ul li:before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2724%27 height=%2724%27 viewBox=%270 0 24 24%27%3E%3Cg transform=%27translate%28-968 -1826%29%27%3E%3Ccircle cx=%2712%27 cy=%2712%27 r=%2712%27 transform=%27translate%28968 1826%29%27 fill=%27%23abc6d6%27/%3E%3Cpath d=%27M8.294 17a1.391 1.391 0 0 1-1.111-.553L3.61 11.724a1.394 1.394 0 1 1 2.223-1.681l2.351 3.1 5.911-9.492A1.394 1.394 0 0 1 16.462 5.13L9.478 16.34A1.39 1.39 0 0 1 8.358 17c-.022 0-.042 0-.064 0Z%27 transform=%27translate%28970 1828.001%29%27 fill=%27%23174766%27/%3E%3C/g%3E%3C/svg%3E");
+  content: "";
+  width: 2.4rem;
+  height: 2.4rem;
+  display: inline-block;
+  position: relative;
+  top: 6px;
+  left: -10px;
+}
+
+.boxes-photos .container {
+  position: relative;
+}
+.boxes-photos .container .row {
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 744px) {
+  .boxes-photos .container .row {
+    flex-wrap: nowrap;
+  }
+}
+.boxes-photos .container .row__decorator {
+  display: none;
+}
+@media screen and (min-width: 1400px) {
+  .boxes-photos .container .row__decorator {
+    display: block;
+    position: absolute;
+    height: 21rem;
+    width: 100%;
+    bottom: -3rem;
+    left: 0;
+    right: 0;
+    border-bottom-left-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+    border: 1px solid #ABC6D6;
+    z-index: 1;
+    background-color: #ffffff;
+  }
+}
+.boxes-photos .container .row .col {
+  position: relative;
+  z-index: 2;
+}
+@media screen and (max-width: 743px) {
+  .boxes-photos .container .row .col {
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (min-width: 744px) {
+  .boxes-photos .container .row .col:first-of-type {
+    padding-right: 1.5rem;
+  }
+}
+@media screen and (min-width: 744px) {
+  .boxes-photos .container .row .col:nth-of-type(2) {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+}
+@media screen and (min-width: 744px) {
+  .boxes-photos .container .row .col:last-of-type {
+    padding-left: 1.5rem;
+  }
+}
+.boxes-photos .container .row .box-photo {
+  background-color: #3199D5;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  width: auto;
+  height: 100%;
+  position: relative;
+  padding-bottom: 2rem;
+}
+.boxes-photos .container .row .box-photo__header {
+  display: flex;
+  min-height: 10rem;
+}
+.boxes-photos .container .row .box-photo__header-icon {
+  background-color: #174766;
+  flex-shrink: 0;
+  width: 7rem;
+  border-bottom-right-radius: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 1200px) {
+  .boxes-photos .container .row .box-photo__header-icon {
+    width: 10rem;
+  }
+}
+.boxes-photos .container .row .box-photo__header-text {
+  display: flex;
+  align-items: center;
+}
+.boxes-photos .container .row .box-photo__header-text a {
+  color: #ffffff;
+  font-size: 1.5rem;
+  line-height: 140%;
+  font-weight: 600;
+  padding: 2rem;
+}
+@media screen and (min-width: 1200px) {
+  .boxes-photos .container .row .box-photo__header-text a {
+    font-size: 2rem;
+  }
+}
+.boxes-photos .container .row .box-photo__content {
+  padding: 2.5rem;
+}
+.boxes-photos .container .row .box-photo__content p {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: #ffffff;
+  font-weight: 500;
+}
+.boxes-photos .container .row .box-photo__link {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 5rem;
+  height: 5rem;
+  background-color: #174766;
+  border-bottom-right-radius: 0.9rem;
 }
 /*!***********************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/swiper/swiper.min.css ***!

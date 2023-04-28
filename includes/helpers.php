@@ -18,4 +18,33 @@ function display_margins_for_page($pageID){
   echo $margin_styles;
 }
 
+
+/**
+ *
+ * generates content in sections/flexible/heading_columns.php
+ *
+ * @param   string  $side_string  'left' or 'right'
+ * @param   string  $image_or_text  'obraz' or 'tekst'
+ * @return  string  <img> OR .heading-columns__lead and .heading-columns__text
+ *
+ */
+
+function display_column_content($side_string, $image_or_text){
+    global $post;
+    if (isset($side_string) && $image_or_text !== 'wybierz'){
+      if ($image_or_text === 'obraz'){
+        $image_field_name = 'image_' . $side_string;
+        $image_ID = get_sub_field($image_field_name, $post->ID);
+      
+        echo wp_get_attachment_image($image_ID, 'image-612', NULL, array('class' => "heading-columns__image",));
+
+      }
+      if ($image_or_text === 'tekst'){
+        $lead_field_name = 'lead_' . $side_string;
+        $text_field_name = 'text_' . $side_string;
+        echo '<p class="heading-columns__lead">' . get_sub_field($lead_field_name, $post->ID) . '</p>';
+        echo '<div class="heading-columns__text">' .apply_filters('the_content', get_sub_field($text_field_name, $post->ID)) . '</div>';
+      }
+    }
+  }
 ?>

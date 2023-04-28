@@ -1,11 +1,130 @@
 .boxes-photos {
   .container {
+    position: relative;
+
     .row {
       justify-content: space-between;
+      flex-wrap: wrap;
+
+      @include media-up(md) {
+        flex-wrap: nowrap;
+      }
+
+      &__decorator {
+        display: none;
+
+        @include media-up(xxl) {
+          display: block;
+          position: absolute;
+          height: 21rem;
+          width: 100%;
+          bottom: -3rem;
+          left: 0;
+          right: 0;
+          border-bottom-left-radius: 3rem;
+          border-bottom-right-radius: 3rem;
+          border: 1px solid $lightBlue;
+          z-index: 1;
+          background-color: $white;
+        }
+
+      }
 
       .col {
-        flex-grow: 1;
+        position: relative;
+        z-index: 2;
+
+        @include media-down(md) {
+          margin-bottom: 2rem;
+        }
+
+        &:first-of-type {
+          @include media-up(md) {
+            padding-right: 1.5rem;
+          }
+        }
+
+        &:nth-of-type(2) {
+          @include media-up(md) {
+            padding-right: 1.5rem;
+            padding-left: 1.5rem;
+          }
+        }
+
+        &:last-of-type {
+          @include media-up(md) {
+            padding-left: 1.5rem;
+          }
+        }
       }
+
+      .box-photo {
+        background-color: $blue;
+        border-radius: 1.2rem;
+        overflow: hidden;
+        width: auto;
+        height: 100%;
+        position: relative;
+        padding-bottom: 2rem;
+
+        &__header {
+          display: flex;
+          min-height: 10rem;
+
+          &-icon {
+            background-color: $darkBlue;
+            flex-shrink: 0;
+            width: 7rem;
+            border-bottom-right-radius: 1.2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @include media-up(xl) {
+              width: 10rem;
+            }
+          }
+
+          &-text {
+            display: flex;
+            align-items: center;
+
+            a {
+              color: $white;
+              font-size: 1.5rem;
+              line-height: 140%;
+              font-weight: 600;
+              padding: 2rem;
+
+              @include media-up(xl) {
+                font-size: 2rem;
+              }
+            }
+          }
+        }
+
+        &__content {
+          padding: 2.5rem;
+
+          p {
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+            color: $white;
+            font-weight: 500;
+          }
+        }
+
+        &__link {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          width: 5rem;
+          height: 5rem;
+          background-color: $darkBlue;
+          border-bottom-right-radius: 0.9rem;
+        }
+      }
+
     }
   }
 }

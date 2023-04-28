@@ -7,10 +7,11 @@ html {
 
 body {
   position: relative;
+}
 
-  // &.top-margin {
-  //   margin-top: 3.2rem;
-  // }
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .container {
@@ -19,7 +20,7 @@ body {
   margin: 0 auto;
 
   @include variables.media-up(xxl) {
-    width: 136.4rem;
+    width: 142.4rem;
   }
 
   &--wide {
@@ -37,7 +38,7 @@ body {
     margin-left: -3rem;
     margin-right: -3rem;
     justify-content: flex-start;
-    align-items: flex-start;
+    // align-items: flex-start;
     flex-wrap: wrap;
 
     .col {

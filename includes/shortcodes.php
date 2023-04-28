@@ -2,7 +2,8 @@
 
 function button_function($atts, $content = null) {
 	$a = shortcode_atts( array(
-		'kolor' => 'something',
+		'kolor' => 'blue',
+		'link' => 'https://',
 	), $atts );
 
   $colors = array(
@@ -13,7 +14,7 @@ function button_function($atts, $content = null) {
   $final_color = $colors[$a['kolor']];
 
 	// return "foo = {$a['kolor']}";
-  return '<a class="button button--' . $final_color . '">' . $content . '</a>';
+  return '<a class="button button--' . $final_color . '" href="' . $a['link'] . '">' . $content . '</a>';
 }
-add_shortcode( 'buttons', 'button_function' );
+add_shortcode( 'button', 'button_function' );
 ?>
