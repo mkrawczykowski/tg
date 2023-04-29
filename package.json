@@ -28,6 +28,7 @@
   "description": "",
   "dependencies": {
     "autoprefixer": "^10.4.14",
+    "perfect-scrollbar": "^1.5.5",
     "swiper": "^9.2.4"
   }
 }

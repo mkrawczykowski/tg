@@ -40,6 +40,7 @@
                   }
                   if ($in_sub_menu === 1){
                     $in_sub_menu = 0;
+                    $parent_item = '<h3>' . $menu_item->title . '</h3>';
                     echo '</ul>';
                     echo '</div>';
                   }
@@ -48,7 +49,8 @@
                   if ($in_sub_menu === 0){
                     $in_sub_menu = 1;
                     echo '<div>';
-                    echo '<ul>';
+                    echo $parent_item;
+                    echo '<ul id="js-menu">';
                     // echo '<li>' . $menu_item->title . '</li>';
                   }
                   if ($in_sub_menu === 1){
