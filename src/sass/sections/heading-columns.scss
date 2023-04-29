@@ -16,6 +16,8 @@
   &--gradient {
     background: rgb(235, 248, 255);
     background: linear-gradient(180deg, rgba(235, 248, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    border-top: 1px solid $lightBlue;
+    border-bottom: 1px solid $lightBlue;
   }
 
   .container {
@@ -59,7 +61,7 @@
 
           ul {
             list-style-type: none;
-            margin-bottom: 3.2rem;
+            margin-bottom: 4.2rem;
 
             li {
               font-size: 1.6rem;

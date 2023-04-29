@@ -1,17 +1,16 @@
 <?php
 
-// function tinymce_config_59772( $init ) {
-//    // Don't remove line breaks
-//    $init['remove_linebreaks'] = false; 
-//    // Convert newline characters to BR tags
-//    $init['convert_newlines_to_brs'] = true; 
-//    // Do not remove redundant BR tags
-//    $init['remove_redundant_brs'] = false;
+add_action('admin_head', 'my_custom_fonts');
 
-//    // Pass $init back to WordPress
-//    return $init;
-// }
-// add_filter('tiny_mce_before_init', 'tinymce_config_59772');
+function my_custom_fonts() {
+  echo '<style>
+    .acf-flexible-content .layout .acf-fc-layout-handle {
+      line-height: 2em;
+      background-color: #dcdcdc;
+      font-size: 18px;
+    } 
+  </style>';
+}
 
 
 

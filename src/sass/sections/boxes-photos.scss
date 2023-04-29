@@ -59,13 +59,32 @@
       }
 
       .box-photo {
-        background-color: $blue;
+        background-color: $lightBlue;
         border-radius: 1.2rem;
         overflow: hidden;
         width: auto;
         height: 100%;
         position: relative;
         padding-bottom: 2rem;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: $blue;
+          transition: all 0.3s ease;
+        }
+
+        &--dark {
+          background-color: $darkBlue;
+
+          .box-photo__header-icon {
+            background-color: $darkDarkBlue;
+          }
+        }
+
+        &--limit-height {
+          max-height: 24rem;
+          object-fit: cover;
+        }
 
         &__header {
           display: flex;
@@ -89,12 +108,16 @@
             display: flex;
             align-items: center;
 
-            a {
+            h3 {
+              padding: 2rem;
+            }
+
+            a,
+            h3 {
               color: $white;
               font-size: 1.5rem;
               line-height: 140%;
               font-weight: 600;
-              padding: 2rem;
 
               @include media-up(xl) {
                 font-size: 2rem;

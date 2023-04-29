@@ -10,12 +10,18 @@
  */
 
 function display_margins_for_page($pageID){
-  $margin_styles = 'style="';
-  $margin_styles .= get_sub_field('margin_top', $pageID) ? 'margin-top: ' . strval(get_sub_field('margin_top', $pageID)) . 'px;' : null;
-  $margin_styles .= get_sub_field('margin_bottom', $pageID) ? 'margin-bottom: ' . strval(get_sub_field('margin_bottom', $pageID)) . 'px;' : null;
-  $margin_styles .= '"';
+  $margin_padding_styles = 'style="';
 
-  echo $margin_styles;
+  //generating margins
+  $margin_padding_styles .= get_sub_field('margin_top', $pageID) ? 'margin-top: ' . strval(get_sub_field('margin_top', $pageID)) . 'px; ' : null;
+  $margin_padding_styles .= get_sub_field('margin_bottom', $pageID) ? 'margin-bottom: ' . strval(get_sub_field('margin_bottom', $pageID)) . 'px; ' : null;
+
+  //generating paddings
+  $margin_padding_styles .= get_sub_field('padding_top', $pageID) ? 'padding-top: ' . strval(get_sub_field('padding_top', $pageID)) . 'px; ' : null;
+  $margin_padding_styles .= get_sub_field('padding_bottom', $pageID) ? 'padding-bottom: ' . strval(get_sub_field('padding_bottom', $pageID)) . 'px;' : null;
+  $margin_padding_styles .= '"';
+
+  echo $margin_padding_styles;
 }
 
 
@@ -43,7 +49,7 @@ function display_column_content($side_string, $image_or_text){
         $lead_field_name = 'lead_' . $side_string;
         $text_field_name = 'text_' . $side_string;
         echo '<p class="heading-columns__lead">' . get_sub_field($lead_field_name, $post->ID) . '</p>';
-        echo '<div class="heading-columns__text">' .apply_filters('the_content', get_sub_field($text_field_name, $post->ID)) . '</div>';
+        echo '<div class="heading-columns__text">' . apply_filters('the_content', get_sub_field($text_field_name, $post->ID)) . '</div>';
       }
     }
   }
