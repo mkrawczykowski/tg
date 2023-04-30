@@ -1,7 +1,7 @@
 import PerfectScrollbar from 'perfect-scrollbar';
 
 document.addEventListener('DOMContentLoaded', () => {
-  const ps = new PerfectScrollbar('#js-menu');
+  const ps = new PerfectScrollbar('#js-submenu');
   // const jsToggleMenu = document.getElementById('js-toggle-menu');
   // const imageMenu = document.querySelector('.featured-image__menu');
   // const ulMenu = document.getElementById('js-menu');

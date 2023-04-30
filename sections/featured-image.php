@@ -8,96 +8,13 @@
 ?>
 
 <section class="featured-image <?php echo $is_front_page ? 'featured-image--slider' : null; ?>">
-
+<?php // generate_sub_menu(); ?>
       <?php
         if (!$is_front_page){ ?>
         
           <img src="<?php echo get_the_post_thumbnail_url(); ?>" class="featured-image__image">
           <div class="featured-image__overlay"></div>
           <div class="featured-image__content">
-          <div class="featured-image__menu">
-          
-          <?php
-            $menu_name = 'header-menu';
-            $locations = get_nav_menu_locations();
-            $menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
-            $menu_items = wp_get_nav_menu_items( $menu->term_id, array( 'order' => 'DESC' ) );
-
-            if($menu_items){ ?>
-
-            <div class="featured-image__menu-submenus" id="js-menus">
-
-            <?php
-              $parent_item;
-              $in_sub_menu = 0;
-              foreach($menu_items as $menu_item) {
-                $first_submenu_item = true;
-                $last_submenu_item = false;
-
-                if ($menu_item->menu_item_parent == 0){
-                  if ($in_sub_menu === 0){
-                    $parent_item = '<h3>' . $menu_item->title . '</h3>';
-                  }
-                  if ($in_sub_menu === 1){
-                    $in_sub_menu = 0;
-                    $parent_item = '<h3>' . $menu_item->title . '</h3>';
-                    echo '</ul>';
-                    echo '</div>';
-                  }
-                }
-                if ($menu_item->menu_item_parent != 0){
-                  if ($in_sub_menu === 0){
-                    $in_sub_menu = 1;
-                    echo '<div>';
-                    echo $parent_item;
-                    echo '<ul id="js-menu">';
-                    // echo '<li>' . $menu_item->title . '</li>';
-                  }
-                  if ($in_sub_menu === 1){
-                    echo '<li>' . $menu_item->title . '</li>';
-                  }
-
-                  // echo $first_submenu_item ? '<div class="featured-image__submenu">' : NULL;
-                  // $first_submenu_item = false;
-                  // echo $parent_item;
-                  // $parent_item = '';
-                  // echo '<li>' . $menu_item->title . '</li>';
-                }
-              }  ?>
-
-            </div>
-
-            <?php
-            }
-            
-          ?>
-
-            <!-- <div class="container container--wide">
-              <div class="row">
-                <div class="col">
-                  <ul id="js-menu">
-                    <li>Instalacje wodno-kanalizacyjne i centralnego ogrzewania</li>
-                    <li>Instalacja gazowa wewnętrzna i zewnętrzna</li>
-                    <li>Wentylacja mechaniczna</li>
-                    <li>Klimatyzacja</li>
-                    <li>Automatyzacja i koordynacja systemów klimatyzacji i centralnego ogrzewania</li>
-                    <li>Uzdatnianie wody</li>
-                    <li>Instalacja gazowa wewnętrzna i zewnętrzna</li>
-                    <li>Wentylacja mechaniczna</li>
-                    <li>Klimatyzacja</li>
-                    <li>Automatyzacja i koordynacja systemów klimatyzacji i centralnego ogrzewania</li>
-                    <li>Uzdatnianie wody</li>
-                    <li>Instalacja gazowa wewnętrzna i zewnętrzna</li>
-                    <li>Wentylacja mechaniczna</li>
-                    <li>Klimatyzacja</li>
-                    <li>Automatyzacja i koordynacja systemów klimatyzacji i centralnego ogrzewania</li>
-                    <li>Uzdatnianie wody</li>
-                  </ul>
-                </div>
-              </div>
-            </div> -->
-            
-        </div>  
               <div class="container container--wide">
                 <div class="row">
                   <div class="col">
@@ -124,13 +41,13 @@
             
           </div>
 
-        <?php
+          
+
+          <?php
         }
 
         if ($is_front_page){
           global $post;
-          // $hp_slides = get_sub_field('hp_slides', $post->ID);
-
 
           if( have_rows('hp_slides', $post->ID) ): ?>
           <div class="featured-image__slider swiper">
@@ -178,8 +95,6 @@
 
                 </div>
                 
-
-
               <?php
              endwhile; ?>
             </div>

@@ -1,7 +1,7 @@
 /*!********************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/sass/index.scss ***!
   \********************************************************************************************************************************************************/
-@import url(https://fonts.googleapis.com/css2?family=Barlow:wght@300,500,600;700;900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Barlow:wght@300,400,500,600;700;900&display=swap);
 /*!************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/perfect-scrollbar/css/perfect-scrollbar.css ***!
   \************************************************************************************************************/
@@ -352,6 +352,37 @@ img {
   display: none;
 }
 
+.footer {
+  background: rgb(247, 252, 255);
+  background: linear-gradient(180deg, rgb(247, 252, 255) 0%, rgb(255, 255, 255) 100%);
+  border: 1px solid #ABC6D6;
+  padding: 5rem 0;
+}
+.footer .container .row .col:first-of-type {
+  width: 100%;
+}
+@media screen and (min-width: 1200px) {
+  .footer .container .row .col:first-of-type {
+    max-width: 40rem;
+  }
+}
+.footer .container .row .col:last-of-type {
+  width: 100%;
+}
+@media screen and (min-width: 1200px) {
+  .footer .container .row .col:last-of-type {
+    width: auto;
+  }
+}
+.footer .container .row .col p {
+  font-size: 1.6rem;
+  color: #174766;
+}
+.footer__designed-by {
+  color: rgba(171, 198, 214, 0.5);
+  font-size: 1.6rem;
+}
+
 .quick-contact {
   display: flex;
   display: none;
@@ -466,42 +497,52 @@ img {
   flex-direction: column;
   justify-content: center;
 }
-.featured-image__content .featured-image__menu {
+.featured-image__content .col {
+  max-width: 80rem;
+}
+.featured-image .featured-image__menu {
   position: absolute;
   width: 100%;
   height: 100%;
-  top: 20rem;
+  top: 0;
   right: 0;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 }
-.featured-image__content .featured-image__menu .row {
+.featured-image .featured-image__menu .row {
   width: 100%;
   justify-content: flex-end;
 }
-.featured-image__content .featured-image__menu .featured-image__menu-submenus {
+.featured-image .featured-image__menu .featured-image__menu-submenus {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  bottom: 0;
+  top: 13.4rem;
+  background: rgb(247, 252, 255);
+  background: linear-gradient(162deg, rgb(247, 252, 255) 0%, rgba(255, 255, 255, 0.27) 5%, rgba(172, 172, 172, 0.47) 64%, rgb(255, 255, 255) 100%);
+  mix-blend-mode: hard-light;
+}
+.featured-image .featured-image__menu .featured-image__menu-submenus .featured-image__menu-submenu {
   position: absolute;
   right: 0;
 }
-.featured-image__content .featured-image__menu ul {
+.featured-image .featured-image__menu ul {
   position: relative;
   width: 600px;
   max-height: 40rem;
   overflow: hidden;
 }
-.featured-image__content .featured-image__menu ul .ps__rail-y {
+.featured-image .featured-image__menu ul .ps__rail-y {
   margin-right: 5.2rem;
 }
-.featured-image__content .featured-image__menu ul li {
+.featured-image .featured-image__menu ul li {
   font-size: 2rem;
   margin-bottom: 2rem;
   text-align: right;
   padding-right: 10rem;
   border-bottom: 0.1rem solid #ABC6D6;
-}
-.featured-image__content .col {
-  max-width: 80rem;
 }
 .featured-image .featured-image__heading {
   font-size: 3.2rem;
@@ -598,6 +639,10 @@ img {
 }
 .featured-image .featured-image__list-item:last-of-type {
   max-width: 50%;
+}
+.featured-image .featured-image__list-link {
+  color: #174766;
+  font-weight: 400;
 }
 
 .heading-columns {

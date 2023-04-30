@@ -1,0 +1,38 @@
+.footer {
+  background: rgb(247, 252, 255);
+  background: linear-gradient(180deg, rgba(247, 252, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  border: 1px solid $lightBlue;
+  padding: 5rem 0;
+
+  .container {
+    .row {
+      .col {
+        &:first-of-type {
+          width: 100%;
+
+          @include media-up(xl) {
+            max-width: 40rem;
+          }
+        }
+
+        &:last-of-type {
+          width: 100%;
+
+          @include media-up(xl) {
+            width: auto;
+          }
+        }
+
+        p {
+          font-size: 1.6rem;
+          color: $darkBlue;
+        }
+      }
+    }
+  }
+
+  &__designed-by {
+    color: $lightBlueAlpha;
+    font-size: 1.6rem;
+  }
+}

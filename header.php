@@ -22,7 +22,7 @@
                 srcset=
                 "
                   <?php echo get_stylesheet_directory_uri(); ?>/public/logo-technika-grzewcza.webp,
-                  <?php echo get_stylesheet_directory_uri(); ?>/public/logo-technika-grzewcza@2x.png 2x
+                  <?php echo get_stylesheet_directory_uri(); ?>/public/logo-technika-grzewcza@2x.webp 2x
                 "
               >
               <img 

@@ -72,55 +72,67 @@
     flex-direction: column;
     justify-content: center;
 
-    .featured-image__menu {
-      position: absolute;
+    .col {
+      max-width: 80rem;
+    }
+  }
+
+  .featured-image__menu {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    .row {
       width: 100%;
-      height: 100%;
-      top: 20rem;
+      justify-content: flex-end;
+    }
+
+    .featured-image__menu-submenus {
+      position: absolute;
       right: 0;
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
+      width: 100%;
+      bottom: 0;
+      top: 13.4rem;
+      background: rgb(247, 252, 255);
+      background: linear-gradient(162deg, rgba(247, 252, 255, 1) 0%, rgba(255, 255, 255, 0.27) 5%, rgba(172, 172, 172, 0.47) 64%, rgba(255, 255, 255, 1) 100%);
+      // opacity: 0.45;
+      mix-blend-mode: hard-light;
 
-      .row {
-        width: 100%;
-        justify-content: flex-end;
-      }
-
-      .featured-image__menu-submenus {
+      .featured-image__menu-submenu {
         position: absolute;
         right: 0;
       }
-
-      ul {
-        position: relative;
-        width: 600px;
-        // height: 400px;
-        max-height: 40rem;
-        overflow: hidden;
-        // -ms-overflow-style: none; //hide scrollbar in Edge
-        // scrollbar-width: none; //hide scrollbar in FF
-
-        // &::-webkit-scrollbar {
-        //   width: 0 !important //hide scrollbar in Webkit-based browsers
-        // }
-
-        .ps__rail-y {
-          margin-right: 5.2rem;
-        }
-
-        li {
-          font-size: 2rem;
-          margin-bottom: 2rem;
-          text-align: right;
-          padding-right: 10rem;
-          border-bottom: 0.1rem solid $lightBlue;
-        }
-      }
     }
 
-    .col {
-      max-width: 80rem;
+    ul {
+      position: relative;
+      width: 600px;
+      // height: 400px;
+      max-height: 40rem;
+      overflow: hidden;
+      // -ms-overflow-style: none; //hide scrollbar in Edge
+      // scrollbar-width: none; //hide scrollbar in FF
+
+      // &::-webkit-scrollbar {
+      //   width: 0 !important //hide scrollbar in Webkit-based browsers
+      // }
+
+      .ps__rail-y {
+        margin-right: 5.2rem;
+      }
+
+      li {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        text-align: right;
+        padding-right: 10rem;
+        border-bottom: 0.1rem solid $lightBlue;
+      }
     }
   }
 
@@ -213,6 +225,11 @@
       &:last-of-type {
         max-width: 50%;
       }
+    }
+
+    &-link {
+      color: $darkBlue;
+      font-weight: 400;
     }
   }
 }
