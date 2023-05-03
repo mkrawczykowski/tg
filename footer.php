@@ -29,7 +29,7 @@
               ?>
               <p class="footer__designed-by">
                 Designed by 
-                <a class="logo" href="https://coolbrand.pl/" target="_blank">
+                <a class="" href="https://coolbrand.pl/" target="_blank">
                   <picture class="">
                     <img 
                       srcset=
@@ -58,7 +58,7 @@
               ));
             ?>
             <?php 
-                echo get_field('footer_contact_text', 'options') ?  '<p class="footer__contact-text">' . get_field('footer_contact_text', 'options') . '</p>' : NULL;
+                echo get_field('footer_contact_text', 'options') ?  '<div class="footer__contact-text"><p>' . get_field('footer_contact_text', 'options') . '</p></div>' : NULL;
               ?>
           </div>
         </div>

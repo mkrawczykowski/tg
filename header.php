@@ -10,7 +10,7 @@
 </head>
 
 <body class="<?php echo  (is_user_logged_in()) ? "top-margin" : null; ?>">
-  <header class="header">
+  <header class="header" id="start">
     <div class="container container--wide">
       <div class="row">
         <div class="col header__content">
@@ -65,7 +65,7 @@
             ) );
           ?>
 
-          <button id="js-toggle-menu">klik</button>
+          <!-- <button id="js-toggle-menu">klik</button> -->
 
 
         </div>

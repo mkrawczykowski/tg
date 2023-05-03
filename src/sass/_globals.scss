@@ -33,6 +33,10 @@ img {
     }
   }
 
+  &--narrow {
+    width: 86.5rem;
+  }
+
   .row {
     display: flex;
     margin-left: -3rem;
