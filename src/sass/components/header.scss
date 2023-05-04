@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   border-bottom: 1px solid $lightBlue;
-  padding-top: 2rem;
+  // padding-top: 2rem;
   z-index: 10;
 
   @include media-up(md) {
@@ -38,7 +38,7 @@
 
     .main-nav {
       margin-left: auto;
-      display: none;
+      // display: none;
     }
   }
 }

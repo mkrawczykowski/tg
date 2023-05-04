@@ -86,11 +86,11 @@ function generate_sub_menu(){
 
                   if ($menu_item->menu_item_parent == 0){
                     if ($in_sub_menu === 0){
-                      $parent_item = '<h3>' . $menu_item->title . '</h3>';
+                      $parent_item = '<h3 class="featured-image__menu-parent-heading">' . $menu_item->title . '</h3>';
                     }
                     if ($in_sub_menu === 1){
                       $in_sub_menu = 0;
-                      $parent_item = '<h3>' . $menu_item->title . '</h3>';
+                      $parent_item = '<h3 class="featured-image__menu-parent-heading">' . $menu_item->title . '</h3>';
                       echo '</ul>';
                       echo '</div>';
                     }

@@ -8,12 +8,12 @@
 ?>
 
 <section class="featured-image <?php echo $is_front_page ? 'featured-image--slider' : null; ?>">
-<?php // generate_sub_menu(); ?>
+<?php generate_sub_menu(); ?>
       <?php
         if (!$is_front_page){ ?>
         
           <img src="<?php echo get_the_post_thumbnail_url(); ?>" class="featured-image__image">
-          <div class="featured-image__overlay"></div>
+          
           <div class="featured-image__content">
               <div class="container container--wide">
                 <div class="row">
@@ -38,11 +38,8 @@
                 </div>
               </div>
             </div>
-            
           </div>
-
-          
-
+          <div class="featured-image__overlay"></div>
           <?php
         }
 

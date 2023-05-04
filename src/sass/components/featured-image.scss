@@ -55,9 +55,10 @@
     bottom: 0;
     height: 100%;
     width: 100%;
-    opacity: 10%;
+    opacity: 100%;
+    z-index: 2;
     background: rgb(255, 255, 255);
-    background: linear-gradient(138deg, rgba(255, 255, 255, 0.7959558823529411) 0%, rgba(255, 255, 255, 0.8015581232492998) 8%, rgba(128, 128, 128, 0.8015581232492998) 50%);
+    background: linear-gradient(138deg, rgba(255, 255, 255, 0.7959558823529411) 0%, rgba(255, 255, 255, 0.8015581232492998) 8%, rgba(128, 128, 128, 0.4) 50%, rgba(255, 255, 255, 0.8015581232492998) 99%);
   }
 
   &__content {
@@ -89,7 +90,7 @@
 
     .row {
       width: 100%;
-      justify-content: flex-end;
+      justify-content: flex-start;
     }
 
     .featured-image__menu-submenus {
@@ -102,25 +103,38 @@
       background: linear-gradient(162deg, rgba(247, 252, 255, 1) 0%, rgba(255, 255, 255, 0.27) 5%, rgba(172, 172, 172, 0.47) 64%, rgba(255, 255, 255, 1) 100%);
       // opacity: 0.45;
       mix-blend-mode: hard-light;
+      z-index: 3;
 
       .featured-image__menu-submenu {
         position: absolute;
         right: 0;
+
+        ul {
+          max-height: 0;
+          transition: all 0.1s ease;
+        }
+
+        &.active {
+
+          ul {
+            max-height: 50rem;
+            transition: all 0.1s ease;
+          }
+        }
       }
+    }
+
+    &-parent-heading {
+      font-size: 6.4rem;
+      line-height: 120%;
+      font-weight: 500;
+      color: $darkBlue;
     }
 
     ul {
       position: relative;
       width: 600px;
-      // height: 400px;
-      max-height: 40rem;
       overflow: hidden;
-      // -ms-overflow-style: none; //hide scrollbar in Edge
-      // scrollbar-width: none; //hide scrollbar in FF
-
-      // &::-webkit-scrollbar {
-      //   width: 0 !important //hide scrollbar in Webkit-based browsers
-      // }
 
       .ps__rail-y {
         margin-right: 5.2rem;
