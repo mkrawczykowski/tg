@@ -1,0 +1,18 @@
+.photo-gallery {
+  .photos-grid {
+    display: flex;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+
+    &__photo {
+      max-width: calc(33% - 1.25rem);
+      border-radius: 1.2rem;
+      overflow: hidden;
+
+      img {
+        object-fit: cover;
+        height: 100%;
+      }
+    }
+  }
+}

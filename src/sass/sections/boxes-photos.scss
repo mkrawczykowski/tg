@@ -84,6 +84,10 @@
         &--limit-height {
           max-height: 24rem;
           object-fit: cover;
+
+          img {
+            height: 240px;
+          }
         }
 
         &__header {
