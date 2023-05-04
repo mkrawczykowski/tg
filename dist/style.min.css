@@ -1028,19 +1028,28 @@ img {
 .contact-form__half-column {
   width: 49%;
 }
-.contact-form .wpcf7-acceptance {
+.contact-form .wpcf7 .wpcf7-form.invalid .wpcf7-response-output {
+  font-size: 1.6rem;
+  border-color: #ff5900;
+}
+.contact-form .wpcf7 .wpcf7-form .wpcf7-not-valid-tip {
+  font-size: 1.6rem;
+  line-height: 140%;
+  color: #ff5900;
+}
+.contact-form .wpcf7 .wpcf7-form .wpcf7-acceptance {
   font-size: 1.6rem;
   line-height: 140%;
   color: #174766;
 }
-.contact-form .wpcf7-acceptance input[type=checkbox] {
+.contact-form .wpcf7 .wpcf7-form .wpcf7-acceptance input[type=checkbox] {
   position: relative;
   cursor: pointer;
   padding: 0;
   margin-right: 15px;
   width: 20px;
 }
-.contact-form .wpcf7-acceptance input[type=checkbox]:before {
+.contact-form .wpcf7 .wpcf7-form .wpcf7-acceptance input[type=checkbox]:before {
   content: "";
   margin-right: 10px;
   display: inline-block;
@@ -1053,19 +1062,19 @@ img {
   position: relative;
   top: 4px;
 }
-.contact-form .wpcf7-acceptance input[type=checkbox]:checked:before {
+.contact-form .wpcf7 .wpcf7-form .wpcf7-acceptance input[type=checkbox]:checked:before {
   background: #174766;
   border-color: #174766;
 }
-.contact-form .wpcf7-acceptance input[type=checkbox]:disabled {
+.contact-form .wpcf7 .wpcf7-form .wpcf7-acceptance input[type=checkbox]:disabled {
   color: #c3c3c3;
   cursor: auto;
 }
-.contact-form .wpcf7-acceptance input[type=checkbox]:disabled:before {
+.contact-form .wpcf7 .wpcf7-form .wpcf7-acceptance input[type=checkbox]:disabled:before {
   box-shadow: none;
   background: #c3c3c3;
 }
-.contact-form .wpcf7-acceptance input[type=checkbox]:checked:after {
+.contact-form .wpcf7 .wpcf7-form .wpcf7-acceptance input[type=checkbox]:checked:after {
   content: "";
   position: absolute;
   left: 5px;
@@ -1076,30 +1085,36 @@ img {
   box-shadow: 2px 0 0 #ffffff, 4px 0 0 #ffffff, 4px -2px 0 #ffffff, 4px -4px 0 #ffffff, 4px -6px 0 #ffffff, 4px -8px 0 #ffffff;
   transform: rotate(45deg);
 }
-.contact-form .wpcf7-acceptance span.wpcf7-list-item {
+.contact-form .wpcf7 .wpcf7-form .wpcf7-acceptance span.wpcf7-list-item {
   margin: 20px 0 50px 0;
 }
-.contact-form .wpcf7-textarea,
-.contact-form .wpcf7-text,
-.contact-form .wpcf7-email {
+.contact-form .wpcf7 .wpcf7-form .wpcf7-textarea,
+.contact-form .wpcf7 .wpcf7-form .wpcf7-text,
+.contact-form .wpcf7 .wpcf7-form .wpcf7-email {
   width: 100%;
   border: 1px solid #174766;
-  margin-bottom: 1.6rem;
+  margin-top: 1.6rem;
+  margin-bottom: 1rem;
   font-size: 1.6rem;
   line-height: 140%;
   color: #174766;
   padding: 1.5rem 3.2rem;
 }
-.contact-form .wpcf7-text,
-.contact-form .wpcf7-email {
+.contact-form .wpcf7 .wpcf7-form .wpcf7-textarea.wpcf7-not-valid,
+.contact-form .wpcf7 .wpcf7-form .wpcf7-text.wpcf7-not-valid,
+.contact-form .wpcf7 .wpcf7-form .wpcf7-email.wpcf7-not-valid {
+  border-color: #ff5900;
+}
+.contact-form .wpcf7 .wpcf7-form .wpcf7-text,
+.contact-form .wpcf7 .wpcf7-form .wpcf7-email {
   height: 5rem;
   border-radius: 100px;
 }
-.contact-form .wpcf7-textarea {
+.contact-form .wpcf7 .wpcf7-form .wpcf7-textarea {
   height: 17rem;
   border-radius: 30px;
 }
-.contact-form .wpcf7-submit {
+.contact-form .wpcf7 .wpcf7-form .wpcf7-submit {
   padding: 1.4rem 3.5rem;
   border-radius: 0.8rem;
   font-size: 1.6rem;
@@ -1110,10 +1125,32 @@ img {
   color: #ffffff;
   transition: all 0.3s ease;
 }
-.contact-form .wpcf7-submit:hover {
+.contact-form .wpcf7 .wpcf7-form .wpcf7-submit:hover {
   background-color: #ABC6D6;
   color: #174766;
   transition: all 0.3s ease;
+}
+.contact-form .wpcf7 .wpcf7-form .wpcf7-response-output {
+  max-width: 86.5rem;
+  margin: 0 auto;
+}
+.contact-form__email-info {
+  font-size: 2.4rem;
+  line-height: 150%;
+  color: #174766;
+  text-align: center;
+  position: relative;
+  margin: 4rem 0 5rem 0;
+}
+.contact-form__email-info:before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2753%27 height=%2753%27 viewBox=%270 0 53 53%27%3E%3Cg transform=%27translate%28-532.5 -1634%29%27%3E%3Cg transform=%27translate%28532.5 1634%29%27%3E%3Ccircle cx=%2726.5%27 cy=%2726.5%27 r=%2726.5%27 transform=%27translate%280 53%29 rotate%28-90%29%27 fill=%27%233199d5%27/%3E%3C/g%3E%3Cpath d=%27M24.415 6H5.379A2.376 2.376 0 0 0 3.012 8.379L3 22.656a2.386 2.386 0 0 0 2.379 2.379H24.415a2.386 2.386 0 0 0 2.379-2.379V8.379A2.386 2.386 0 0 0 24.415 6Zm0 16.656H5.379v-11.9L14.9 16.707l9.518-5.949ZM14.9 14.328 5.379 8.379H24.415Z%27 transform=%27translate%28544.104 1644.982%29%27 fill=%27%23fff%27/%3E%3C/g%3E%3C/svg%3E");
+  content: "";
+  width: 5.3rem;
+  height: 5.3rem;
+  position: relative;
+  top: 1.7rem;
+  right: 1rem;
+  display: inline-block;
 }
 
 .photo-gallery .photos-grid {

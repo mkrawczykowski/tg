@@ -16,5 +16,7 @@ global $post;
     echo do_shortcode($form_shortcode);
   ?>
 
-  <p><?php echo $email_info; ?></p>
+  <p class="contact-form__email-info">
+    <?php echo $email_info; ?>
+  </p>
 </section>
