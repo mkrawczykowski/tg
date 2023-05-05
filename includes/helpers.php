@@ -68,7 +68,7 @@ function display_column_content($side_string, $image_or_text){
 
 function generate_sub_menu(){
 
-  echo '<div class="featured-image__menu">';
+  // echo '<div class="featured-image__menu">';
               $menu_name = 'header-menu';
               $locations = get_nav_menu_locations();
               $menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
@@ -103,7 +103,7 @@ function generate_sub_menu(){
                       echo '<ul id="js-submenu"  class="featured-image__menu-ul">';
                     }
                     if ($in_sub_menu === 1){
-                      echo '<li>' . $menu_item->title . '</li>';
+                      echo '<a href="' . $menu_item->url . '"><li>' . $menu_item->title . '</li></a>';
                     }
                   }
                 }
@@ -113,7 +113,7 @@ function generate_sub_menu(){
               }
 
             
-          echo '</div>';
+          // echo '</div>';
 
 
 

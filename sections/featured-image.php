@@ -39,7 +39,7 @@
               </div>
             </div>
           </div>
-          <div class="featured-image__overlay"></div>
+          <!-- <div class="featured-image__overlay"></div> -->
           <?php
         }
 
@@ -57,7 +57,7 @@
                 ?>
                 <div class="swiper-slide">
                   <?php echo wp_get_attachment_image($hp_slides__picture, 'full', NULL, array( "class" => "featured-image__image" )); ?>
-                  <div class="featured-image__overlay"></div>
+                  <!-- <div class="featured-image__overlay"></div> -->
                   <div class="featured-image__content">
                     <div class="container container--wide">
                       <div class="row">
