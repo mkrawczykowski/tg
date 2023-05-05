@@ -597,7 +597,7 @@ img {
   content: "← Wróć";
   display: inline-block;
 }
-.main-nav__nav .menu-item.current-menu-item:before {
+.main-nav__nav .menu-item.current-menu-item:before, .main-nav__nav .menu-item.current-menu-parent:before {
   position: absolute;
   content: "";
   display: inline-block;
@@ -683,7 +683,6 @@ img {
 
 .quick-contact {
   display: flex;
-  display: none;
   align-items: center;
 }
 .quick-contact__link {
@@ -829,10 +828,12 @@ img {
   z-index: 3;
   transition: all 0.3s ease;
   opacity: 0;
+  visibility: hidden;
 }
 .featured-image .featured-image__menu-submenus.active {
   transition: all 0.3s ease;
   opacity: 1;
+  visibility: visible;
 }
 .featured-image .featured-image__menu-submenus .featured-image__menu-submenu {
   position: absolute;

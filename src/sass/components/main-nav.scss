@@ -114,7 +114,8 @@
         }
       }
 
-      &.current-menu-item {
+      &.current-menu-item,
+      &.current-menu-parent {
         &:before {
           position: absolute;
           content: '';

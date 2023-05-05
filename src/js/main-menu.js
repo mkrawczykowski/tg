@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   itemsWithChildren.forEach((itemWithChildren, itemWithChildrenIndex) => {
     itemWithChildren.addEventListener('click', (event) => {
+      event.preventDefault();
       submenuFeaturedImage.forEach((itemSubmenuFeaturedImage, itemSubmenuFeaturedImageIndex) => {
         if (itemWithChildrenIndex === itemSubmenuFeaturedImageIndex) {
           itemSubmenuFeaturedImage.classList.toggle('active');

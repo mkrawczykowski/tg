@@ -106,10 +106,12 @@
     z-index: 3;
     transition: all 0.3s ease;
     opacity: 0;
+    visibility: hidden;
 
     &.active {
       transition: all 0.3s ease;
       opacity: 1;
+      visibility: visible;
     }
 
     .featured-image__menu-submenu {
