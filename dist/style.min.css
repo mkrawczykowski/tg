@@ -1,7 +1,7 @@
 /*!********************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/sass/index.scss ***!
   \********************************************************************************************************************************************************/
-@import url(https://fonts.googleapis.com/css2?family=Barlow:wght@300,400,500,600;700;900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;900&display=swap);
 /*!************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/perfect-scrollbar/css/perfect-scrollbar.css ***!
   \************************************************************************************************************/
@@ -125,7 +125,6 @@
 /*!************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/sass/index.scss (1) ***!
   \************************************************************************************************************************************************************/
-@charset "UTF-8";
 /***
     The new CSS reset - version 1.7.3 (last updated 7.8.2022)
     GitHub page: https://github.com/elad2412/the-new-css-reset
@@ -319,7 +318,7 @@ img {
   border-bottom: 1px solid #ABC6D6;
   z-index: 10;
 }
-@media screen and (min-width: 744px) {
+@media screen and (min-width: 1200px) {
   .header {
     min-height: 13.5rem;
     position: absolute;
@@ -333,21 +332,9 @@ img {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-@media screen and (min-width: 744px) {
+@media screen and (min-width: 1200px) {
   .header__content {
     flex-wrap: nowrap;
-  }
-}
-.header__content .logo {
-  width: 15.5rem;
-  height: auto;
-  display: inline-block;
-  display: flex;
-  align-items: center;
-}
-@media screen and (min-width: 744px) {
-  .header__content .logo {
-    width: 21.5rem;
   }
 }
 .header__content .main-nav {
@@ -508,7 +495,8 @@ img {
     left: -100%;
     background-color: #ffffff;
     margin-top: 7rem;
-    position: relative;
+    position: absolute;
+    z-index: 2;
   }
 }
 .main-nav.active {
@@ -525,7 +513,7 @@ img {
   flex-direction: column;
   width: 100%;
 }
-@media screen and (min-width: 744px) {
+@media screen and (min-width: 1200px) {
   .main-nav__nav {
     flex-direction: row;
     width: auto;
@@ -543,26 +531,42 @@ img {
   display: flex;
   align-items: center;
 }
-@media screen and (min-width: 744px) {
+@media screen and (min-width: 1200px) {
   .main-nav__nav .menu-item {
     height: 100%;
     position: relative;
+    margin: 0 2rem 0 2rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .main-nav__nav .menu-item {
+    margin: 0 3.1rem 0 3.1rem;
   }
 }
 .main-nav__nav .menu-item:first-of-type {
   margin: 0;
 }
-@media screen and (min-width: 744px) {
+@media screen and (min-width: 1200px) {
+  .main-nav__nav .menu-item:first-of-type {
+    margin: 0 2rem 0 0;
+  }
+}
+@media screen and (min-width: 1400px) {
   .main-nav__nav .menu-item:first-of-type {
     margin: 0 3.1rem 0 0;
   }
 }
-@media screen and (min-width: 744px) {
+@media screen and (min-width: 1200px) {
+  .main-nav__nav .menu-item:last-of-type {
+    margin: 0 0 0 2rem;
+  }
+}
+@media screen and (min-width: 1400px) {
   .main-nav__nav .menu-item:last-of-type {
     margin: 0 0 0 3.1rem;
   }
 }
-@media screen and (min-width: 744px) {
+@media screen and (min-width: 1200px) {
   .main-nav__nav .menu-item.menu-item-has-children {
     position: relative;
   }
@@ -592,10 +596,6 @@ img {
   transition: all 0.3s ease;
   background-color: #ffffff;
   left: -100%;
-}
-.main-nav__nav .menu-item.menu-item-has-children .sub-menu:before {
-  content: "← Wróć";
-  display: inline-block;
 }
 .main-nav__nav .menu-item.current-menu-item:before, .main-nav__nav .menu-item.current-menu-parent:before {
   position: absolute;
@@ -630,6 +630,11 @@ img {
 .main-nav__nav .menu-item.button a:hover {
   background-color: #ABC6D6;
   transition: all 0.3s ease;
+}
+@media screen and (min-width: 1200px) {
+  .main-nav__nav .menu-item.quick-contact {
+    display: none;
+  }
 }
 .main-nav__nav .menu-item a:hover {
   color: #ABC6D6;
@@ -682,11 +687,16 @@ img {
 }
 
 .quick-contact {
-  display: flex;
+  display: none;
   align-items: center;
 }
+@media screen and (min-width: 1200px) {
+  .quick-contact {
+    display: flex;
+  }
+}
 .quick-contact__link {
-  display: none;
+  display: inline;
   letter-spacing: -0.1px;
   font-size: 1.6rem;
   line-height: 100%;
@@ -695,12 +705,16 @@ img {
   text-transform: uppercase;
   position: relative;
 }
-@media screen and (min-width: 744px) {
+@media screen and (min-width: 1200px) {
   .quick-contact__link {
-    display: inline;
     padding-right: 4.1rem;
-    margin-left: 11rem;
+    margin-left: 5rem;
     max-width: auto;
+  }
+}
+@media screen and (min-width: 1800px) {
+  .quick-contact__link {
+    margin-left: 11rem;
   }
 }
 .quick-contact__link:after {
@@ -730,6 +744,11 @@ img {
 }
 @media screen and (min-width: 744px) {
   .logo {
+    width: 19rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .logo {
     width: 21.5rem;
   }
 }
@@ -738,11 +757,11 @@ img {
   position: relative;
   width: 100%;
   height: auto;
-  min-height: 40rem;
+  min-height: 50rem;
 }
 @media screen and (min-width: 1200px) {
   .featured-image {
-    height: 45rem;
+    height: 60rem;
   }
 }
 @media screen and (min-width: 1800px) {
@@ -773,6 +792,22 @@ img {
   width: 100%;
   width: 100%;
   height: 100%;
+}
+.featured-image__slider.swiper .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 15rem;
+}
+.featured-image__slider.swiper .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet {
+  background: #e8e8e9;
+  opacity: 1;
+  width: 50px;
+  height: 12px;
+  border-radius: 100px;
+  transition: all 0.3s ease;
+}
+.featured-image__slider.swiper .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet-active {
+  background: #ffffff;
+  transition: all 0.3s ease;
+  width: 150px;
 }
 .featured-image__image {
   max-height: 100%;

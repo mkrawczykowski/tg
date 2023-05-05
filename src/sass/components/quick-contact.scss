@@ -1,10 +1,13 @@
 .quick-contact {
-  display: flex;
-  // display: none;
+  display: none;
   align-items: center;
 
+  @include media-up(xl) {
+    display: flex;
+  }
+
   &__link {
-    display: none;
+    display: inline;
     letter-spacing: -0.1px;
     font-size: 1.6rem;
     line-height: 100%;
@@ -13,12 +16,14 @@
     text-transform: uppercase;
     position: relative;
 
-
-    @include media-up(md) {
-      display: inline;
+    @include media-up(xl) {
       padding-right: 4.1rem;
-      margin-left: 11rem;
+      margin-left: 5rem;
       max-width: auto;
+    }
+
+    @include media-up(xxxl) {
+      margin-left: 11rem;
     }
 
     &:after {

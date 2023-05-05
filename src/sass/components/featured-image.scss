@@ -4,10 +4,10 @@
   position: relative;
   width: 100%;
   height: auto;
-  min-height: 40rem;
+  min-height: 50rem;
 
   @include media-up(xl) {
-    height: 45rem;
+    height: 60rem;
   }
 
   @include media-up(xxxl) {

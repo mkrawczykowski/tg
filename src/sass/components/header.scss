@@ -1,13 +1,11 @@
 .header {
-  // padding-top: 2.7rem;
   min-height: 10rem;
   display: flex;
   align-items: center;
   border-bottom: 1px solid $lightBlue;
-  // padding-top: 2rem;
   z-index: 10;
 
-  @include media-up(md) {
+  @include media-up(xl) {
     min-height: 13.5rem;
     position: absolute;
     top: 0;
@@ -20,25 +18,12 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-    @include media-up(md) {
+    @include media-up(xl) {
       flex-wrap: nowrap;
-    }
-
-    .logo {
-      width: 15.5rem;
-      height: auto;
-      display: inline-block;
-      display: flex;
-      align-items: center;
-
-      @include media-up(md) {
-        width: 21.5rem;
-      }
     }
 
     .main-nav {
       margin-left: auto;
-      // display: none;
     }
   }
 }

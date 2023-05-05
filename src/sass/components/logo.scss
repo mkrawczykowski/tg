@@ -6,6 +6,10 @@
   align-items: center;
 
   @include media-up(md) {
+    width: 19rem;
+  }
+
+  @include media-up(xxl) {
     width: 21.5rem;
   }
 }
