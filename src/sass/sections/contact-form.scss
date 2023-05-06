@@ -1,10 +1,24 @@
 .contact-form {
   &__heading {
-    font-size: 6.4rem;
     line-height: 120%;
     color: $darkBlue;
     text-align: center;
-    margin-bottom: 6rem;
+    font-size: 4.4rem;
+    margin-bottom: 2.7rem;
+
+    @include media-up(md) {
+      margin-bottom: 3.7rem;
+    }
+
+    @include media-up(xl) {
+      font-size: 5rem;
+      margin-bottom: 4.7rem;
+    }
+
+    @include media-up(xxxl) {
+      font-size: 6.4rem;
+      margin-bottom: 6rem;
+    }
   }
 
   &__row {
@@ -149,23 +163,36 @@
   }
 
   &__email-info {
-    font-size: 2.4rem;
+    font-size: 1.6rem;
     line-height: 150%;
     color: $darkBlue;
-    text-align: center;
+    text-align: left;
     position: relative;
-    margin: 4rem 0 5rem 0;
+    margin: 2rem 0 3rem 0;
+    padding-left: 8rem;
+
+    @include media-up(xl) {
+      font-size: 2.4rem;
+      text-align: center;
+      margin: 4rem 0 5rem 0;
+    }
 
     &:before {
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='53' height='53' viewBox='0 0 53 53'%3E%3Cg transform='translate(-532.5 -1634)'%3E%3Cg transform='translate(532.5 1634)'%3E%3Ccircle cx='26.5' cy='26.5' r='26.5' transform='translate(0 53) rotate(-90)' fill='%233199d5'/%3E%3C/g%3E%3Cpath d='M24.415 6H5.379A2.376 2.376 0 0 0 3.012 8.379L3 22.656a2.386 2.386 0 0 0 2.379 2.379H24.415a2.386 2.386 0 0 0 2.379-2.379V8.379A2.386 2.386 0 0 0 24.415 6Zm0 16.656H5.379v-11.9L14.9 16.707l9.518-5.949ZM14.9 14.328 5.379 8.379H24.415Z' transform='translate(544.104 1644.982)' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E");
       content: '';
+      top: -0.4rem;
       width: 5.3rem;
       height: 5.3rem;
-      position: relative;
-      top: 1.7rem;
-      right: 1rem;
+      position: absolute;
+      top: -0.3rem;
+      left: 2rem;
       display: inline-block;
+
+      @include media-up(xl) {
+        position: relative;
+        top: 1.9rem;
+        left: -0.5rem;
+      }
     }
   }
-
 }

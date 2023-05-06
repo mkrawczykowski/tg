@@ -2,6 +2,10 @@
   position: relative;
   height: 53px;
 
+  &--top-margin {
+    margin-top: 3rem;
+  }
+
   &:before {
     content: '';
     display: inline-block;

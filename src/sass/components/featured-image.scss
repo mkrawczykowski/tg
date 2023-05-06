@@ -4,7 +4,7 @@
   position: relative;
   width: 100%;
   height: auto;
-  min-height: 50rem;
+  min-height: 60rem;
 
   @include media-up(xl) {
     height: 60rem;
@@ -39,6 +39,10 @@
 
     &.swiper {
       .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+        @include media-down(xxl) {
+          display: none;
+        }
+
         bottom: 15rem;
 
         .swiper-pagination-bullet {
@@ -100,16 +104,6 @@
     }
   }
 
-  // .featured-image__menu {
-  //   position: absolute;
-  //   width: 100%;
-  //   height: 100%;
-  //   top: 0;
-  //   right: 0;
-  //   display: flex;
-  //   flex-direction: column;
-  //   flex-wrap: wrap;
-
   .row {
     width: 100%;
     justify-content: flex-start;
@@ -122,7 +116,7 @@
     bottom: 0;
     top: 13.4rem;
     background: rgb(247, 252, 255);
-    background: linear-gradient(162deg, rgba(247, 252, 255, 1) 0%, rgba(255, 255, 255, 0.27) 5%, rgba(172, 172, 172, 0.47) 64%, rgba(255, 255, 255, 1) 100%);
+    background: linear-gradient(162deg, rgb(247, 252, 255) 0%, rgba(255, 255, 255, 0.57) 5%, rgb(210 208 208 / 87%) 64%, rgb(255, 255, 255) 100%);
     mix-blend-mode: hard-light;
     z-index: 3;
     transition: all 0.3s ease;
@@ -138,8 +132,18 @@
     .featured-image__menu-submenu {
       position: absolute;
       right: 0;
+      top: 0;
+      bottom: 0;
+      height: 0;
+      opacity: 0;
+      overflow: hidden;
+      width: 1000px;
 
       &.active {
+        height: auto;
+        opacity: 1;
+        overflow: visible;
+
         .featured-image__menu-parent-heading {
           max-height: 10rem;
           opacity: 1;
@@ -164,15 +168,16 @@
     opacity: 0;
     max-height: 0;
     transition: all 0.3s ease;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    margin-right: 10rem;
   }
 
-  ul {
-    max-height: 0;
-    opacity: 0;
+  .featured-image__menu-ul {
     transition: all 0.3s ease;
     position: relative;
-    width: 600px;
-    overflow: hidden;
+    width: 1000px;
+
 
     .ps__rail-y {
       margin-right: 5.2rem;
@@ -206,17 +211,13 @@
   }
 
   .featured-image__paragraph {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     line-height: 100%;
     color: $darkBlue;
     margin: 0 0 3.5rem 0;
     line-height: 147%;
 
     @include media-up(xl) {
-      font-size: 1.7rem;
-    }
-
-    @include media-up(xxxl) {
       font-size: 2rem;
     }
   }
@@ -283,6 +284,9 @@
     &-link {
       color: $darkBlue;
       font-weight: 400;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      text-align: right;
     }
   }
 }

@@ -5,7 +5,6 @@
   $image_or_text_left = get_sub_field('image_or_text_left', $post->ID);
   $text_below = get_sub_field('text_below', $post->ID);
   $background_gradient = get_sub_field('background_gradient', $post->ID);
-  echo $background_gradient;
 ?>
 
 <section class="heading-columns<?php echo $background_gradient ? ' heading-columns--gradient' : NULL; ?>" <?php display_margins_for_page($post->ID) ?>>

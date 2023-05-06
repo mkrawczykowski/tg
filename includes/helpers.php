@@ -100,7 +100,7 @@ function generate_sub_menu(){
                       $in_sub_menu = 1;
                       echo '<div class="featured-image__menu-submenu">';
                       echo $parent_item;
-                      echo '<ul id="js-submenu"  class="featured-image__menu-ul">';
+                      echo '<ul id="js-submenu" class="featured-image__menu-ul">';
                     }
                     if ($in_sub_menu === 1){
                       echo '<a href="' . $menu_item->url . '"><li>' . $menu_item->title . '</li></a>';

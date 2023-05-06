@@ -5,9 +5,13 @@
     flex-wrap: wrap;
 
     &__photo {
-      max-width: calc(33% - 1.25rem);
+      max-width: calc(50% - 1.25rem);
       border-radius: 1.2rem;
       overflow: hidden;
+
+      @include media-up(xl) {
+        max-width: calc(32% - 1.25rem);
+      }
 
       img {
         object-fit: cover;
