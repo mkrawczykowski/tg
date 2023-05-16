@@ -43,7 +43,7 @@
             <?php
             $header_email = get_field('header_email', 'options');
             if (!empty($header_email)) : ?>
-              <a class="quick-contact__link" href="<?php echo $header_email; ?>">Szybki kontakt</a>  
+              <a class="quick-contact__link" href="mailto:<?php echo $header_email; ?>">Szybki kontakt</a>  
             <?php endif ?>
           </div>
 
